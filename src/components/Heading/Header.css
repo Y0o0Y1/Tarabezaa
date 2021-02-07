@@ -1,0 +1,36 @@
+.header{
+    display:grid;
+    grid-template-areas: "logo buttons";
+    align-items: center;
+    background-color: white;
+    border-bottom: 10px solid #ec634b ; 
+}
+.header img{
+    grid-area: logo;
+    cursor:pointer;
+}
+.header a{
+    text-decoration: none;
+    color:inherit;
+
+}
+.header li{
+    border:1px solid #ec634b;
+    display:inline;
+    border-radius: 25px;
+    padding: 1rem 1rem;
+    margin:1rem;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+}
+.header li:hover {
+    background-color: #ec634b;
+    color:white;
+}
+.header ul{
+    grid-area: buttons;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:0 20px;
+}
