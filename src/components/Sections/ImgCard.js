@@ -2,15 +2,15 @@ import React from 'react'
 import "./ImgCard.scss"
 import {Link} from "react-router-dom"
 
-const ImgCard = ({imgSrc,imgTitle ,imgId}) => {
+const ImgCard = ({imgSrc,imgTitle ,imgId,imgContent}) => {
 
     return (
         <div className="card">
-         <Link to={`/${imgId}`} >
+        <span className="img-title">{imgTitle}</span>
+         <Link to={`#`} >
             <img className="img-card" src={imgSrc} alt=" "></img>
-            <h3>Image Number {imgId}</h3>
-
         </Link>
+        <p className="img-description">{imgContent}</p>
         </div>
     )
 }

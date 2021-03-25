@@ -1,20 +1,14 @@
 .section{
-    background:url("./227-2276794_high-resolution-food-background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width:100%;
-    height:100%;
-    position:fixed;
-    z-index: -1;
+    
 }
 .services{
     display: grid;
     align-content: center;
     grid-template-areas: 
-    "gallery"
-    "pagination";
-    gap:200px;
-    padding-bottom:200px;
+    "gallery "
+    "pagination ";
+    gap:20px;
+    padding-bottom:20px;
     margin:20px 0;
 }
 .section .quote{
@@ -32,23 +26,6 @@
     font-weight: 1000;
     max-width: max-content;
     line-height: 70px;
-    border-top:5px  solid #ff4800;
-    border-bottom:5px  solid #ff4800;
 
 }
 
-
-@media(max-width:376px){
-    .services{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "form"
-        "gallery"
-        "pagination";
-    }
-    .form{
-        margin-bottom: 20px;
-    }
-
-}

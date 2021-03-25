@@ -2,8 +2,7 @@
     display:grid;
     grid-template-areas: "logo buttons";
     align-items: center;
-    background-color: white;
-    border-bottom: 10px solid #ec634b ; 
+    background-color: transparent;
 }
 .header img{
     grid-area: logo;
@@ -11,7 +10,7 @@
 }
 .header a{
     text-decoration: none;
-    color:inherit;
+    color:white;
 
 }
 .header li{

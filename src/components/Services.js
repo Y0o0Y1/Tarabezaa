@@ -3,15 +3,19 @@ import "./Services.scss"
 import Gallery from "./Sections/Gallery"
 import Pagination from "./Pagination/Pagination"
 import axios from 'axios';
-
+import dummyData from "./DummyData.json"
 const Services = () => {
     const [photos,setPhotos]=useState([])
     const [currentPage,setCurrentPage]=useState(1)
     const [photosPerPage]=useState(5)
     useEffect(() => {
           const fetchPhotos = async () => {
-          const res = await axios.get('https://jsonplaceholder.typicode.com/photos');
-          setPhotos(res.data.slice(0,30));
+          const res = await axios.get('https://nofipay.net/api/v1/feeds');
+          console.log(res.data.data)
+          const restaurants = res.data.data.recent_restaurants
+          console.log(restaurants)
+          setPhotos(restaurants);
+          console.log(photos)
         };
         fetchPhotos();
       }, []);
@@ -19,16 +23,19 @@ const Services = () => {
     const indexOfLastPhoto = currentPage*photosPerPage
     const indexOfFirstPhoto = indexOfLastPhoto-photosPerPage
     const currentPhotos = photos.slice(indexOfFirstPhoto,indexOfLastPhoto)
+    console.log(currentPhotos)
     const paginate = pageNumber => setCurrentPage(pageNumber);
     return (
         <div className="section">
           <div className="quote">
-            <h1>Top Restaurants</h1>
+            <h1>Recent Restaurants</h1>
           </div>
         <div className="services">            
             <Gallery photos={currentPhotos}/>
-            <Pagination className="pagination" photosPerPage={photosPerPage} totalPhotos={photos.length} paginate={paginate}/>
-            </div>
+          </div>
+          <div className="recent-items">
+          
+          </div>
         </div>
     )
 }

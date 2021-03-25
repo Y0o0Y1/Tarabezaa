@@ -1,27 +1,24 @@
 footer{
     display:grid;
-    position: fixed;
+    background: none;
     left: 0;
     bottom: 0;
-    width: 100%;
-    background-color: white;
-    border-top:10px solid #ec634b;
-    justify-content: center;
+    height: 15vh;
+    max-width: 155vh;
     align-content: center;
+    margin-top: 5vh;
 }
 
-footer h1{
-    display:inline;
-}
 
 footer ul{
-    grid-area:footer-btns;
     padding-top: 2rem;
     justify-content: center;
+    justify-self: center;
     margin-bottom: 50px;
 }
 
 footer li{
+    color: white;
     border:1px solid #ec634b;
     display:inline;
     border-radius: 25px;
@@ -34,4 +31,9 @@ footer li{
 footer li:hover {
     background-color: #ec634b;
     color:white;
+}
+.footer-logo{
+    grid-area:footerLogo;
+    justify-self: end;
+    text-align: left;
 }
